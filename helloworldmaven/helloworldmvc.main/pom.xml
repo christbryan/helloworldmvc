@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <artifactId>helloworldmaven</artifactId>
+    <groupId>fr.exia</groupId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
 
   <groupId>fr.exia</groupId>
-  <artifactId>helloworldmaven</artifactId>
+  <artifactId>helloworldmvc.main</artifactId>
   <version>0.0.1-SNAPSHOT</version>
 
-  <name>helloworldmaven</name>
+  <name>helloworldmvc.main</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
@@ -24,6 +27,21 @@
       <artifactId>junit</artifactId>
       <version>4.11</version>
       <scope>test</scope>
+    </dependency>
+    <dependency>
+    	<groupId>fr.exia</groupId>
+    	<artifactId>helloworldmvc.controller</artifactId>
+    	<version>0.0.1-SNAPSHOT</version>
+    </dependency>
+    <dependency>
+    	<groupId>fr.exia</groupId>
+    	<artifactId>helloworldmvc.view</artifactId>
+    	<version>0.0.1-SNAPSHOT</version>
+    </dependency>
+    <dependency>
+    	<groupId>fr.exia</groupId>
+    	<artifactId>helloworldmvc.model</artifactId>
+    	<version>0.0.1-SNAPSHOT</version>
     </dependency>
   </dependencies>
 
@@ -72,12 +90,4 @@
       </plugins>
     </pluginManagement>
   </build>
-  <packaging>pom</packaging>
-  <modules>
-  	<module>helloworldmvc.controller</module>
-  	<module>helloworldmvc.model</module>
-  	<module>helloworldmvc.view</module>
-  	<module>helloworldmvc.contract</module>
-  	<module>helloworldmvc.main</module>
-  </modules>
 </project>
